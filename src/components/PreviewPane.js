@@ -3,7 +3,8 @@ import marked from 'marked';
 
 const PreviewPane = props => (
   <div
-    dangerouslySetInnerHTML={{ __html: marked(props.inputText, { sanitize: true }) }}
+    className='preview-pane'  
+    dangerouslySetInnerHTML={{ __html: marked(props.inputText) }}
   />
 );
 
