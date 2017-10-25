@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import 'normalize.css'
 import './css/style.css';
 import placeholdText from './utils/placehold-text';
 

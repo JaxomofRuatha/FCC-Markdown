@@ -1,13 +1,16 @@
 body {
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  line-height: 1.5;
-  word-wrap: break-word; }
+  box-sizing: border-box; }
+
+h4 {
+  color: rosybrown;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem 0; }
 
 textarea {
   outline: none;
-  resize: none; }
+  resize: none;
+  border: none; }
 
 .app-container {
   display: flex;
@@ -19,29 +22,47 @@ textarea {
   box-shadow: 4px 4px 1px 2px rosybrown; }
 
 .input-pane {
-  width: 45%;
-  background: transparent;
-  border-left: 1px inset #fff;
-  margin: 1rem;
-  padding: 1rem;
-  color: #fff; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin: 0 1rem 1rem 1rem; }
+  .input-pane .md-input {
+    background: transparent;
+    border-left: 1px inset #fff;
+    padding: 1rem;
+    color: #fff;
+    width: 95%;
+    height: 100%; }
 
 .preview-pane {
-  color: #24292e;
-  width: 55%;
-  padding: 0 1rem;
-  margin: 1rem;
-  background: #fff;
-  overflow-y: scroll;
-  overflow-wrap: break-word; }
-  .preview-pane h1, .preview-pane h2, .preview-pane h3, .preview-pane h4, .preview-pane h5, .preview-pane h6 {
-    font-weight: 600;
-    line-height: 1.25; }
-  .preview-pane pre {
-    line-height: 1.25; }
-  .preview-pane ul {
-    padding-left: 2em; }
-  .preview-pane blockquote {
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #dfe2e5; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1.2;
+  margin: 0 1rem 1rem 1rem; }
+  .preview-pane .md-preview {
+    color: #24292e;
+    padding: 0 1rem;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word; }
+    .preview-pane .md-preview h1, .preview-pane .md-preview h2, .preview-pane .md-preview h3, .preview-pane .md-preview h4, .preview-pane .md-preview h5, .preview-pane .md-preview h6 {
+      font-weight: 600;
+      line-height: 1.25; }
+    .preview-pane .md-preview pre {
+      line-height: 1.25; }
+    .preview-pane .md-preview ul {
+      padding-left: 2em; }
+    .preview-pane .md-preview blockquote {
+      padding: 0 1em;
+      color: #6a737d;
+      border-left: 0.25em solid #dfe2e5; }
+
+@media only screen and (max-width: 900px) {
+  .app-container {
+    flex-direction: column; } }
