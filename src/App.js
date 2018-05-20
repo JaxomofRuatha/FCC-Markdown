@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import 'normalize.css'
+import 'normalize.css';
 import './css/style.css';
 import placeholdText from './utils/placehold-text';
 
@@ -19,16 +19,19 @@ class App extends Component {
     this.setState({
       inputText: e.target.value
     });
-  }
+  };
 
   render() {
     return (
-      <div className="app-container">
-        <InputPane onChange={this._handleChange} inputText={this.state.inputText} />
+      <main className="app-container">
+        <InputPane
+          onChange={this._handleChange}
+          inputText={this.state.inputText}
+        />
         <PreviewPane inputText={this.state.inputText} />
-      </div>
+      </main>
     );
-  }  
+  }
 }
 
 export default App;

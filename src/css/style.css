@@ -1,68 +1,100 @@
+/* Base styles */
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-h4 {
+.top-label {
   color: rosybrown;
   text-align: center;
   margin: 0;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
 
 textarea {
   outline: none;
   resize: none;
-  border: none; }
+  border: none;
+}
 
+/* Primary app container */
 .app-container {
   display: flex;
   justify-content: space-between;
   height: 90vh;
-  width: 95vw;
-  margin: 2em auto;
+  width: 95%;
+  margin: 2rem auto;
   background: linear-gradient(60deg, #1b2127 0%, #485563 100%);
-  box-shadow: 4px 4px 1px 2px rosybrown; }
+  box-shadow: 4px 4px 1px 2px rosybrown;
+}
 
-.input-pane {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  margin: 0 1rem 1rem 1rem; }
-  .input-pane .md-input {
-    background: transparent;
-    border-left: 1px inset #fff;
-    padding: 1rem;
-    color: #fff;
-    width: 95%;
-    height: 100%; }
-
+/* Component panes */
+.input-pane,
 .preview-pane {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.input-pane {
+  flex: 1;
+}
+
+.input-pane__text {
+  background: transparent;
+  border-left: 1px inset #fff;
+  padding: 1rem;
+  color: #fff;
+  width: 95%;
+  height: 100%;
+}
+
+.preview-pane {
   flex: 1.2;
-  margin: 0 1rem 1rem 1rem; }
-  .preview-pane .md-preview {
-    color: #24292e;
-    padding: 0 1rem;
-    background: #fff;
-    overflow-y: scroll;
-    overflow-wrap: break-word;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
-    line-height: 1.5;
-    word-wrap: break-word; }
-    .preview-pane .md-preview h1, .preview-pane .md-preview h2, .preview-pane .md-preview h3, .preview-pane .md-preview h4, .preview-pane .md-preview h5, .preview-pane .md-preview h6 {
-      font-weight: 600;
-      line-height: 1.25; }
-    .preview-pane .md-preview pre {
-      line-height: 1.25; }
-    .preview-pane .md-preview ul {
-      padding-left: 2em; }
-    .preview-pane .md-preview blockquote {
-      padding: 0 1em;
-      color: #6a737d;
-      border-left: 0.25em solid #dfe2e5; }
+}
+
+.preview-pane__text {
+  color: #24292e;
+  padding: 0 1rem;
+  background: #fff;
+  overflow-y: scroll;
+  overflow-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.preview-pane__text h1,
+.preview-pane__text h2,
+.preview-pane__text h3,
+.preview-pane__text h4,
+.preview-pane__text h5,
+.preview-pane__text h6 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.preview-pane__text pre {
+  line-height: 1.25;
+}
+
+.preview-pane__text ul {
+  padding-left: 2em;
+}
+
+.preview-pane__text blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  border-left: 0.25em solid #dfe2e5;
+}
 
 @media only screen and (max-width: 900px) {
   .app-container {
-    flex-direction: column; } }
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,ewoJInZlcnNpb24iOiAzLAoJImZpbGUiOiAic3JjL2Nzcy9zdHlsZS5jc3MiLAoJInNvdXJjZXMiOiBbCgkJInNyYy9zYXNzL3N0eWxlLnNjc3MiCgldLAoJIm5hbWVzIjogW10sCgkibWFwcGluZ3MiOiAiQUFBQSxpQkFBaUI7QUFFakIsQUFBQSxJQUFJLENBQUM7RUFDSCxVQUFVLEVBQUUsVUFBVTtFQUN0QixXQUFXLEVBQUUsNEJBQTRCO0NBQzFDOztBQUVELEFBQUEsVUFBVSxDQUFDO0VBQ1QsS0FBSyxFQUFFLFNBQVM7RUFDaEIsVUFBVSxFQUFFLE1BQU07RUFDbEIsTUFBTSxFQUFFLENBQUM7RUFDVCxPQUFPLEVBQUUsUUFBUTtFQUNqQixTQUFTLEVBQUUsTUFBTTtDQUNsQjs7QUFFRCxBQUFBLFFBQVEsQ0FBQztFQUNQLE9BQU8sRUFBRSxJQUFJO0VBQ2IsTUFBTSxFQUFFLElBQUk7RUFDWixNQUFNLEVBQUUsSUFBSTtDQUNiOztBQUVELDJCQUEyQjtBQUUzQixBQUFBLGNBQWMsQ0FBQztFQUNiLE9BQU8sRUFBRSxJQUFJO0VBQ2IsZUFBZSxFQUFFLGFBQWE7RUFDOUIsTUFBTSxFQUFFLElBQUk7RUFDWixLQUFLLEVBQUUsR0FBRztFQUNWLE1BQU0sRUFBRSxTQUFTO0VBQ2pCLFVBQVUsRUFBRSxnREFBZ0Q7RUFDNUQsVUFBVSxFQUFFLHlCQUF5QjtDQUN0Qzs7QUFFRCxxQkFBcUI7QUFFckIsQUFBQSxXQUFXO0FBQ1gsYUFBYSxDQUFDO0VBQ1osT0FBTyxFQUFFLElBQUk7RUFDYixjQUFjLEVBQUUsTUFBTTtFQUN0QixXQUFXLEVBQUUsTUFBTTtFQUNuQixNQUFNLEVBQUUsZ0JBQWdCO0NBQ3pCOztBQUVELEFBQUEsV0FBVyxDQUFDO0VBQ1YsSUFBSSxFQUFFLENBQUM7Q0FVUjs7QUFSRSxBQUFELGlCQUFPLENBQUM7RUFDTixVQUFVLEVBQUUsV0FBVztFQUN2QixXQUFXLEVBQUUsY0FBYztFQUMzQixPQUFPLEVBQUUsSUFBSTtFQUNiLEtBQUssRUFBRSxJQUFJO0VBQ1gsS0FBSyxFQUFFLEdBQUc7RUFDVixNQUFNLEVBQUUsSUFBSTtDQUNiOztBQUdILEFBQUEsYUFBYSxDQUFDO0VBQ1osSUFBSSxFQUFFLEdBQUc7Q0FrQ1Y7O0FBaENFLEFBQUQsbUJBQU8sQ0FBQztFQUNOLEtBQUssRUFBRSxPQUFPO0VBQ2QsT0FBTyxFQUFFLE1BQU07RUFDZixVQUFVLEVBQUUsSUFBSTtFQUNoQixVQUFVLEVBQUUsTUFBTTtFQUNsQixhQUFhLEVBQUUsVUFBVTtFQUN6QixXQUFXLEVBQUUscUlBQ3lEO0VBQ3RFLFNBQVMsRUFBRSxJQUFJO0VBQ2YsV0FBVyxFQUFFLEdBQUc7RUFDaEIsU0FBUyxFQUFFLFVBQVU7Q0FxQnRCOztBQS9CQSxBQVdDLG1CQVhLLENBV0wsRUFBRTtBQVhILG1CQUFNLENBWUwsRUFBRTtBQVpILG1CQUFNLENBYUwsRUFBRTtBQWJILG1CQUFNLENBY0wsRUFBRTtBQWRILG1CQUFNLENBZUwsRUFBRTtBQWZILG1CQUFNLENBZ0JMLEVBQUUsQ0FBQztFQUNELFdBQVcsRUFBRSxHQUFHO0VBQ2hCLFdBQVcsRUFBRSxJQUFJO0NBQ2xCOztBQW5CRixBQW9CQyxtQkFwQkssQ0FvQkwsR0FBRyxDQUFDO0VBQ0YsV0FBVyxFQUFFLElBQUk7Q0FDbEI7O0FBdEJGLEFBdUJDLG1CQXZCSyxDQXVCTCxFQUFFLENBQUM7RUFDRCxZQUFZLEVBQUUsR0FBRztDQUNsQjs7QUF6QkYsQUEwQkMsbUJBMUJLLENBMEJMLFVBQVUsQ0FBQztFQUNULE9BQU8sRUFBRSxLQUFLO0VBQ2QsS0FBSyxFQUFFLE9BQU87RUFDZCxXQUFXLEVBQUUsb0JBQW9CO0NBQ2xDOztBQUlMLE1BQU0sTUFBTSxNQUFNLE1BQU0sU0FBUyxFQUFFLEtBQUs7RUFDdEMsQUFBQSxjQUFjLENBQUM7SUFDYixjQUFjLEVBQUUsTUFBTTtHQUN2QiIKfQ== */

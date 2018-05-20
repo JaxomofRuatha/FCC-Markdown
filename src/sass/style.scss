@@ -1,12 +1,16 @@
+/* Base styles */
+
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h4 {
+.top-label {
   color: rosybrown;
   text-align: center;
   margin: 0;
   padding: 0.5rem 0;
+  font-size: 1.5rem;
 }
 
 textarea {
@@ -15,23 +19,32 @@ textarea {
   border: none;
 }
 
+/* Primary app container */
+
 .app-container {
   display: flex;
   justify-content: space-between;
   height: 90vh;
-  width: 95vw;
-  margin: 2em auto;
+  width: 95%;
+  margin: 2rem auto;
   background: linear-gradient(60deg, #1b2127 0%, #485563 100%);
   box-shadow: 4px 4px 1px 2px rosybrown;
 }
 
-.input-pane {
+/* Component panes */
+
+.input-pane,
+.preview-pane {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1;
   margin: 0 1rem 1rem 1rem;
-  .md-input {
+}
+
+.input-pane {
+  flex: 1;
+
+  &__text {
     background: transparent;
     border-left: 1px inset #fff;
     padding: 1rem;
@@ -42,22 +55,25 @@ textarea {
 }
 
 .preview-pane {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   flex: 1.2;
-  margin: 0 1rem 1rem 1rem;
-  .md-preview {
+
+  &__text {
     color: #24292e;
     padding: 0 1rem;
     background: #fff;
     overflow-y: scroll;
     overflow-wrap: break-word;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-weight: 600;
       line-height: 1.25;
     }
@@ -71,9 +87,8 @@ textarea {
       padding: 0 1em;
       color: #6a737d;
       border-left: 0.25em solid #dfe2e5;
+    }
   }
-  }
-
 }
 
 @media only screen and (max-width: 900px) {
