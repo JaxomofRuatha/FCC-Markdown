@@ -95,4 +95,14 @@ textarea {
   .app-container {
     flex-direction: column;
   }
+
+  .top-label {
+    font-size: 1.2em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .top-label {
+    font-size: 1em;
+  }
 }
